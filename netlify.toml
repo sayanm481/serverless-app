@@ -1,2 +1,7 @@
 [build]
   functions = "functions"
+
+[[redirects]]
+from = "/dealer-integration/:subscriberID/:siteID"
+to = ".netlify/functions/functions?subscriberID=:subscriberID&siteID=:siteID"  
+status = 200

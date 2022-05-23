@@ -1,4 +1,4 @@
-exports.handler = async () => ({
+exports.handler = async (props) => ({
     statusCode: 200,
-    body: 'boop',
+    body: `subscriberID=${props.subscriberID}<br/>siteID=${props.siteID}`,
   });

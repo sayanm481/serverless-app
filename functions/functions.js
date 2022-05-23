@@ -1,4 +1,4 @@
-exports.handler = async (props) => ({
+exports.handler = async (event, context, callback) => ({
     statusCode: 200,
-    body: `subscriberID=${props.subscriberID}<br/>siteID=${props.siteID}`,
+    body: `subscriberID=${event.queryStringParameters.subscriberID}<br/>siteID=${event.queryStringParameters.siteID}<br/>${event.queryStringParameters}`,
   });

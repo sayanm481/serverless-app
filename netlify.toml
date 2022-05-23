@@ -2,6 +2,6 @@
   functions = "functions"
 
 [[redirects]]
-from = "/dealer-integration/:subscriberID/:siteID/"
-to = "/.netlify/functions/functions?subscriberID=:subscriberID&siteID=:siteID"  
+from = "/dealer-integration/*"
+to = "/.netlify/functions/functions/:subscriberID/:siteID/"  
 status = 200

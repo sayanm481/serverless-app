@@ -1,8 +1,11 @@
 exports.handler = async (event, context, callback) => {
-    console.log(event.queryStringParameters);
+    console.log(event);
     return {
     statusCode: 200,
-    body: `subscriberID=${event.queryStringParameters.subscriberID}<br/>siteID=${event.queryStringParameters.siteID}`,
+    headers: {
+      'Content-Type': 'text/javascript',
+    },
+    body: `subscriberID=${event.queryStringParameters.subscriberID}\nsiteID=${event.queryStringParameters.siteID}`,
     };
   };
 

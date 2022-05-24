@@ -2,8 +2,7 @@
   functions = "functions"
 
 [[redirects]]
-  from = "/dealer-integration"
-  to = "/.netlify/functions/functions"
-  status = 301
-  force = true
-  query = {subscriberID = ":subscriberID",siteID= ":siteID"}
+from = "/dealerintegration/*"
+to = "/.netlify/functions/functions/*"  
+status = 200
+headers = {X-From = "Netlify"}
